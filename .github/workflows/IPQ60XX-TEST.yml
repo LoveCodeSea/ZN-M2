@@ -8,7 +8,7 @@ on:
 env:
   REPO_URL: https://github.com/LiBwrt-op/openwrt-6.x.git
   REPO_BRANCH: test
-  CONFIG_FILE: configs/ipq60xx-test.config
+  CONFIG_FILE: configs/ipq60xx-wifi-test-l2tp-docker.config
   DIY_SCRIPT: diy-script.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
@@ -159,7 +159,7 @@ jobs:
         body: |
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 测试固件(带WIFI)
-          - 这是带WIFI以及NSS的6.6内核固件
+          - 这是带WIFI-docker-l2tp以及NSS的6.6内核固件
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
